@@ -11,7 +11,6 @@ public class EmailRandomGenerator {
                 + ".com";
     }
 
-
     public static String nonValid() {
         return "@#$%^&*()_)(*&^%"
                 + "@"

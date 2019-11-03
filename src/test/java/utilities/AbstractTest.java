@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 
+import java.util.concurrent.TimeUnit;
+
 @ContextConfiguration(locations = {"classpath:configuration/selenium-demo-config.xml"})
 public class AbstractTest extends AbstractTestNGSpringContextTests {
 
@@ -26,6 +28,13 @@ public class AbstractTest extends AbstractTestNGSpringContextTests {
         return driverFactory;
     }
 
+    public void sleep(int duration){
+        try {
+            TimeUnit.SECONDS.sleep(duration);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void setDriverFactory(DriverFactory driverFactory) {
         this.driverFactory = driverFactory;
