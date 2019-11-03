@@ -1,2 +1,4 @@
 /seleniumdemo.iml
 /.idea
+/target
+/chrome-bin
